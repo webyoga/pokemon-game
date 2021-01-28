@@ -1,6 +1,6 @@
 import Header from "./components/Header";
-import Header from "./components/Layout";
-import Header from "./components/Footer";
+import Layout from "./components/Layout";
+import Footer from "./components/Footer";
 import urlBg from "./assets/bg1.jpg";
 
 
