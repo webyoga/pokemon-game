@@ -1,17 +1,22 @@
 import s from './style.module.css';
 
-const LayoutBlock = () => {
+const Layout = (props) => {
     return (
      <>
-      <section className={s.root} id="<-- ЗДЕСЬ props.id -->">
+      <section className={s.root} id={props.id}>
         <div className={s.wrapper}>
           <article>
+          <img src={urlBg} />
             <div className={s.title}>
-                <h3><-- ЗДЕСЬ props.title --></h3>
+                <h3>
+                  {props.title}
+                </h3>
                 <span className={s.separator}></span>
             </div>
-            <div className={s.desc full}>
-                <p><-- ЗДЕСЬ props.desc --></p>
+            <div className={s.desc s.full}>
+                <p>
+                  {props.descr}
+                </p>
             </div>
         </article>
     </div>
@@ -20,4 +25,4 @@ const LayoutBlock = () => {
 )
 }
 
-export default LayoutBlock;
+export default Layout;

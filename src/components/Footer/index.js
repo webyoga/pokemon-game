@@ -1,6 +1,6 @@
 import s from './style.module.css';
 
-const FooterBlock = () => {
+const Footer = () => {
 	return (
 	 <>
 	  <footer>
@@ -14,4 +14,4 @@ const FooterBlock = () => {
 }
 
 
-export default FooterBlock;
+export default Footer;
