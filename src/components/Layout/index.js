@@ -4,7 +4,7 @@ import s from './style.module.css';
 const Layout = (props) => {
     return (
      <>
-     <section className={s.root} id={props.id} style={{ backgroundImage: `${props.urlBg}` }}>
+    <section className={s.root} id={props.id} style={{ background: `${props.urlBg}, ${props.colorBg}` }}>
 
        <div className={s.wrapper}>
         
