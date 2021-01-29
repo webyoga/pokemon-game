@@ -1,10 +1,11 @@
 import s from './style.module.css';
 //import img1 from "../../assets/bg1.jpg";
 
-const Layout = (props) => {
+const Layout = ({ id, title, descr, urlBg = false, colorBg = false}) => {
+  const styleRoot = urlBg && colorBg ? { background: `${urlBg}, ${colorBg}` } : {};
     return (
      <>
-    <section className={s.root} id={props.id} style={{ background: `${props.urlBg}, ${props.colorBg}` }}>
+    <section className={s.root} style={styleRoot}>
 
        <div className={s.wrapper}>
         
@@ -12,13 +13,13 @@ const Layout = (props) => {
            <div className={s.title}>
 
                 <h3>
-                  {props.title}
+                  {title}
                 </h3>
                 <span className={s.separator}></span>
             </div>
             <div className={`${s.desc} ${s.full}`}>
                 <p>
-                  {props.descr}
+                  {descr}
                 </p>
             </div>
         </article>
