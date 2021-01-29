@@ -15,19 +15,19 @@ const App = () => {
         id={1}
         title="Layout title #1"
         descr="Layout description #1"
-        urlBg="../../assets/bg1.jpg"
+        urlBg="url(../../assets/bg1.jpg)"
       />
       <Layout
         id={2} 
         title="Layout title #2"
         descr="Layout description #2"
-       // colorBg=""
+        urlBg="none"
       />
       <Layout
         id={3} 
         title="Layout title #3"
         descr="Layout description #3"
-       // urlBg={urlBg}
+        urlBg="url(../../assets/bg1.jpg)"
       />
       <Footer />
     </>
