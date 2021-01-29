@@ -1,14 +1,15 @@
 import s from './style.module.css';
-//import urlBg from "./assets/bg1.jpg";
+//import img1 from "../../assets/bg1.jpg";
 
 const Layout = (props) => {
     return (
      <>
-      <section className={s.root} id={props.id}>
-        <div className={s.wrapper}>
+      <section className={s.root} id={props.id} style={{ backgroundImage: `url(${props.urlBg})` }}>
+       <div className={s.wrapper}>
+        
           <article>
-          <img src={urlBg} />
-            <div className={s.title}>
+           <div className={s.title}>
+
                 <h3>
                   {props.title}
                 </h3>
@@ -27,3 +28,5 @@ const Layout = (props) => {
 }
 
 export default Layout;
+
+

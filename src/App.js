@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Layout from "./components/Layout";
 import Footer from "./components/Footer";
-import urlBg from "./assets/bg1.jpg";
+//import img1 from "./assets/bg1.jpg";
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         id={1}
         title="Layout title #1"
         descr="Layout description #1"
-        urlBg={`${urlBg}`}
+        urlBg="../../assets/bg1.jpg"
       />
       <Layout
         id={2} 
