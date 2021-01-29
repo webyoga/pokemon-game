@@ -1,4 +1,5 @@
 import s from './style.module.css';
+//import urlBg from "./assets/bg1.jpg";
 
 const Layout = (props) => {
     return (
@@ -13,7 +14,7 @@ const Layout = (props) => {
                 </h3>
                 <span className={s.separator}></span>
             </div>
-            <div className={s.desc s.full}>
+            <div className={`${s.desc} ${s.full}`}>
                 <p>
                   {props.descr}
                 </p>
