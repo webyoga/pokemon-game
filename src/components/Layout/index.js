@@ -1,8 +1,9 @@
 import s from './style.module.css';
-//import img1 from "../../assets/bg1.jpg";
+import img1 from "../../assets/bg1.jpg";
 
 const Layout = ({ id, title, descr, urlBg = false, colorBg = false}) => {
-  const styleRoot = urlBg && colorBg ? { background: `${urlBg}, ${colorBg}` } : {};
+//  const styleRoot = urlBg && colorBg ? { backgroundImage: `${img1}`} : { backgroundImage: 'none'} ;
+const styleRoot = urlBg ? { backgroundImage: `url(${img1})`} : { backgroundColor: `${colorBg}`} ;
     return (
      <>
     <section className={s.root} style={styleRoot}>
