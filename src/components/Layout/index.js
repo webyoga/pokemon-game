@@ -1,12 +1,25 @@
 import s from './style.module.css';
-import img1 from "../../assets/bg1.jpg";
+//import img1 from "../../assets/bg1.jpg";
 
-const Layout = ({ id, title, descr, urlBg = false, colorBg = false}) => {
+const Layout = ({ id, title, urlBg, colorBg, children, colorTitle }) => {
+//  console.log('####: props', props);
+  const sectionStyle = {};
 //  const styleRoot = urlBg && colorBg ? { backgroundImage: `${img1}`} : { backgroundImage: 'none'} ;
-const styleRoot = urlBg ? { backgroundImage: `url(${img1})`} : { backgroundColor: `${colorBg}`} ;
+//const styleRoot = urlBg ? { backgroundImage: `url(${img1})`} : { backgroundColor: `${colorBg}`} ;
+    if (urlBg) {
+      sectionStyle.backgroundImage = `url(${urlBg})`;
+    }
+    if (colorBg) {
+      sectionStyle.backgroundColor = colorBg;
+    }
+
     return (
      <>
-    <section className={s.root} style={styleRoot}>
+    <section 
+         className={s.root} 
+         style={sectionStyle}
+         id={id}
+    >
 
        <div className={s.wrapper}>
         
@@ -19,9 +32,7 @@ const styleRoot = urlBg ? { backgroundImage: `url(${img1})`} : { backgroundColor
                 <span className={s.separator}></span>
             </div>
             <div className={`${s.desc} ${s.full}`}>
-                <p>
-                  {descr}
-                </p>
+              {children}
             </div>
         </article>
     </div>
