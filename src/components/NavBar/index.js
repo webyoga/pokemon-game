@@ -1,4 +1,5 @@
 import s from './style.module.css';
+import cn from 'classnames';
 
 const NavBar = () => {
 	return (
@@ -8,7 +9,7 @@ const NavBar = () => {
     <p className={s.brand}>
       LOGO
     </p>
-    <a className={`${s.menuButton} ${s.active}`}>
+    <a className={cn(s.menuButton, s.active)}>
       <span />
     </a>
   </div>
